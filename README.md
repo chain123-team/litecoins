@@ -10,9 +10,6 @@ LiteCoins (LTS) is a sustainable cryptocurrency modeled after Satoshi Nakamotoâ€
   with a collateral of 100,000 LTS.
 
 
-
-Please reach out at info@lts.org
-
 ### Coin Specs
 | Block Time                  | 60 Seconds      |
 | Max Coin Supply (PoW Phase) | 500,000,000 LTS    |
