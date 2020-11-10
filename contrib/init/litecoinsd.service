@@ -1,0 +1,26 @@
+[Unit]
+Description=LiteCoins's distributed currency daemon
+After=network.target
+
+[Service]
+User=litecoins
+Group=litecoins
+
+Type=forking
+PIDFile=/var/lib/litecoinsd/litecoinsd.pid
+
+ExecStart=/usr/bin/litecoinsd -daemon -pid=/var/lib/litecoinsd/litecoinsd.pid \
+          -conf=/etc/litecoins/litecoins.conf -datadir=/var/lib/litecoinsd
+
+ExecStop=-/usr/bin/litecoins-cli -conf=/etc/litecoins/litecoins.conf \
+         -datadir=/var/lib/litecoinsd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

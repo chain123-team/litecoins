@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/litecoins_bg.qm</file>
+        <file alias="ca">locale/litecoins_ca.qm</file>
+        <file alias="cs">locale/litecoins_cs.qm</file>
+        <file alias="da">locale/litecoins_da.qm</file>
+        <file alias="de">locale/litecoins_de.qm</file>
+        <file alias="en">locale/litecoins_en.qm</file>
+        <file alias="en_US">locale/litecoins_en_US.qm</file>
+        <file alias="es">locale/litecoins_es.qm</file>
+        <file alias="fi">locale/litecoins_fi.qm</file>
+        <file alias="fr_FR">locale/litecoins_fr_FR.qm</file>
+        <file alias="it">locale/litecoins_it.qm</file>
+        <file alias="ja">locale/litecoins_ja.qm</file>
+        <file alias="ko_KR">locale/litecoins_ko_KR.qm</file>
+        <file alias="nl">locale/litecoins_nl.qm</file>
+        <file alias="pl">locale/litecoins_pl.qm</file>
+        <file alias="pt">locale/litecoins_pt.qm</file>
+        <file alias="pt_BR">locale/litecoins_pt_BR.qm</file>
+        <file alias="ro_RO">locale/litecoins_ro_RO.qm</file>
+        <file alias="ru">locale/litecoins_ru.qm</file>
+        <file alias="sk">locale/litecoins_sk.qm</file>
+        <file alias="sv">locale/litecoins_sv.qm</file>
+        <file alias="tr">locale/litecoins_tr.qm</file>
+        <file alias="uk">locale/litecoins_uk.qm</file>
+        <file alias="zh_CN">locale/litecoins_zh_CN.qm</file>
+        <file alias="zh_TW">locale/litecoins_zh_TW.qm</file>
+    </qresource>
+</RCC>

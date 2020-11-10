@@ -1,0 +1,26 @@
+# /etc/conf.d/litecoinsd: config file for /etc/init.d/litecoinsd
+
+# Config file location
+#LTSOIND_CONFIGFILE="/etc/litecoins/litecoins.conf"
+
+# What directory to write pidfile to?  (created and owned by $LTSOIND_USER)
+#LTSOIND_PIDDIR="/var/run/litecoinsd"
+
+# What filename to give the pidfile
+#LTSOIND_PIDFILE="${LTSOIND_PIDDIR}/litecoinsd.pid"
+
+# Where to write litecoinsd data (be mindful that the blockchain is large)
+#LTSOIND_DATADIR="/var/lib/litecoinsd"
+
+# User and group to own litecoinsd process
+#LTSOIND_USER="litecoins"
+#LTSOIND_GROUP="litecoins"
+
+# Path to litecoinsd executable
+#LTSOIND_BIN="/usr/bin/litecoinsd"
+
+# Nice value to run litecoinsd under
+#LTSOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+LTSOIND_OPTS=""

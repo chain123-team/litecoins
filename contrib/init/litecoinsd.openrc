@@ -1,0 +1,86 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout
+#
+if [ -d "/var/lib/litecoins/.litecoins" ]; then
+	LTSOIND_DEFAULT_DATADIR="/var/lib/litecoins/.litecoins"
+else
+	LTSOIND_DEFAULT_DATADIR="/var/lib/litecoinsd"
+fi
+
+LTSOIND_CONFIGFILE=${LTSOIND_CONFIGFILE:-/etc/litecoins/litecoins.conf}
+LTSOIND_PIDDIR=${LTSOIND_PIDDIR:-/var/run/litecoinsd}
+LTSOIND_PIDFILE=${LTSOIND_PIDFILE:-${LTSOIND_PIDDIR}/litecoinsd.pid}
+LTSOIND_DATADIR=${LTSOIND_DATADIR:-${LTSOIND_DEFAULT_DATADIR}}
+LTSOIND_USER=${LTSOIND_USER:-litecoins}
+LTSOIND_GROUP=${LTSOIND_GROUP:-litecoins}
+LTSOIND_BIN=${LTSOIND_BIN:-/usr/bin/litecoinsd}
+
+name="LiteCoins Core Daemon"
+description="LiteCoins crypto-currency p2p network daemon"
+
+command="/usr/bin/litecoinsd"
+command_args="-pid=\"${LTSOIND_PIDFILE}\" \
+		-conf=\"${LTSOIND_CONFIGFILE}\" \
+		-datadir=\"${LTSOIND_DATADIR}\" \
+		-daemon \
+		${LTSOIND_OPTS}"
+
+required_files="${LTSOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${LTSOIND_USER} \
+			-N ${LTSOIND_NICE:-0} -w 2000"
+pidfile="${LTSOIND_PIDFILE}"
+retry=60
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${LTSOIND_USER}:${LTSOIND_GROUP}" \
+	"${LTSOIND_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${LTSOIND_USER}:${LTSOIND_GROUP}" \
+	"${LTSOIND_PIDDIR}"
+
+	checkpath -f \
+	-o ${LTSOIND_USER}:${LTSOIND_GROUP} \
+	-m 0660 \
+	${LTSOIND_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${LTSOIND_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run litecoinsd."
+		eerror "The setting must appear in ${LTSOIND_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following"
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is also recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"LiteCoins Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}
