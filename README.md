@@ -7,26 +7,15 @@ LiteCoins (LTS) is a sustainable cryptocurrency modeled after Satoshi Nakamotoâ€
 - Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftTX_.
 - Decentralized blockchain voting providing for consensus based advancement of the current Masternode
   technology used to secure the network and provide the above features, each Masternode is secured
-  with a collateral of 2,500 LTS.
+  with a collateral of 100,000 LTS.
 
-More information at [lts.org](http://www.lts.org)
+
 
 Please reach out at info@lts.org
 
 ### Coin Specs
 | Block Time                  | 60 Seconds      |
-| Max Coin Supply (PoW Phase) | 500,000 LTS    |
-| Max Coin Supply (PoS Phase) | 20,500,000 LTS |
-| Premine                     | 500,000 LTS    |
+| Max Coin Supply (PoW Phase) | 500,000,000 LTS    |
+| Max Coin Supply (PoS Phase) | 1,000,000,000 LTS |
+| Premine                     | 500,000,000 LTS    |
 
-### Reward Distribution
-
-| **Block Height** | **Masternodes**  | **PoS**          |
-|------------------|------------------|------------------|
-| 201-5000         | 85% (0.85 LTS)  | 15% (0.15 LTS)   |
-| 5001-25000       | 85% (25.5 LTS)  | 15% (4.5 LTS)     |
-| 25001-100000     | 85% (17 LTS)    | 15% (3 LTS)     |
-| 100001-1050000   | 85% (8.5 LTS)   | 15% (1.5 LTS)     |
-| 1050001-2100000  | 85% (4.25 LTS)  | 15% (0.75 LTS)   |
-| 2100001-3150000  | 85% (2.13 LTS)  | 15% (0.375 LTS)  |
-| 3150001-Infinite | 85% (1.06 LTS)  | 15% (0.195 LTS)  |
