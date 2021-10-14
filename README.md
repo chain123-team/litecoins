@@ -1,44 +1,42 @@
 # LITECOINS Core integration/staging repository
 
-[![Build Status](https://api.travis-ci.org/litecoins/litecoins.svg?branch=master)](https://travis-ci.org/litecoins/litecoins) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![Build Status](https://api.travis-ci.org/chain123-team/litecoins.svg?branch=master)](https://travis-ci.org/chain123-team/litecoins) ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ## What is LiTeCoinS?
 
-LiTeCoinS (LTS) is a sustainable cryptocurrency modeled after Satoshi Nakamoto’s vision for Bitcoin. 
-It is a decentralized, peer-to-peer transactional currency designed to offer a solution to the problem posed by the exponential increase in energy consumed by Bitcoin and other proof-of-work currencies. 
-Proof-of-work mining is environmentally unsustainable due to the electricity used by high-powered mining hardware. 
-LiTeCoinS utilizes the Tier Protocol, an energy efficient proof-of-stake algorithm inspired by BITG/DASH, can be mined on any computer, and will never require specialized mining equipment. 
-The Tier Protocol offers a simple solution to Bitcoin sustainability issues and provides a faster, more scalable blockchain that is better suited for daily transactional use.
-Fast transactions featuring guaranteed zero confirmation transactions, we call it SwiftTX.
+LiteCoinS (LTS) is a sustainable cryptocurrency modeled after Satoshi Nakamoto’s vision for Bitcoin.
+It is a decentralized, peer-to-peer transactional currency designed to offer a solution to the problem posed by the exponential increase in energy consumed by Bitcoin and other proof-of-work currencies.
+Proof-of-work mining is environmentally unsustainable due to the electricity used by high-powered mining hardware.
+LiteCoinS utilizes the Two-Tier Protocol, an energy efficient proof-of-stake algorithm inspired by BITG/DASH, can be mined on any computer, and will never require specialized mining equipment.
+And LiteCoinS provides proof-of-work algorithm that has double-spend protection,  provided by a decentralized P2P protocol for tracking transfers of coins. We have better trustworthiness because it is protected by computation.
+The Two-Tier Protocol offers a simple solution to Bitcoin sustainability issues and provides a faster, more scalable blockchain that is better suited for daily transactional use.
 Decentralized blockchain voting providing for consensus based advancement of the current Masternode technology used to secure the network and provide the above features, each Masternode is secured with a collateral of 1,000,000 LTS.
-
-- Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftTX_.
 - Decentralized blockchain voting providing for consensus based advancement of the current Masternode
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 100,000  LTS.
 
 More information at [litecoins.tech](https://www.litecoins.tech)
 
-Please reach out at LiTeCoinS. 123chain.team@gmail.com
+Please reach out at LiTeCoinS. help@litecoins.tech
 
 
 LITECOINS Core integration/staging repository
 =====================================
 
-LiTeCoinS is a brand new digital currency that combines all the positive aspects of successful digital currencies, while taking into account their flaws and weak points.
+LiteCoinS is a brand new digital currency that combines all the positive aspects of successful digital currencies, while taking into account their flaws and weak points.
 The project brings tangible benefits not only to the digital world but also to the real one.
 
 
 ### Coin Specs
 
 <table>
-<tr><td>Name & ticker</td><td>LiTeCoinS / LTS</td></tr>
-<tr><td>Consensus algorithm</td><td>POS</td></tr>
-<tr><td>POS phase duration</td><td>2,000 blocks</td></tr>
-<tr><td>POS block reward</td><td>200 LTS</td></tr>
+<tr><td>Name & ticker</td><td>LiteCoinS / LTS</td></tr>
+<tr><td>Consensus algorithm</td><td>POW / POS</td></tr>
 <tr><td>Instamine protection</td><td>First 2000 blocks</td></tr>
 <tr><td>Hashing algorithm</td><td>Keccak</td></tr>
 <tr><td>Estimated LiTeCoinS supply during POS</td><td>1,000,000,000 LTS</td></tr>
+<tr><td>POS phase duration</td><td>2,000 blocks</td></tr>
+<tr><td>POS block reward</td><td>200 LTS</td></tr>
 <tr><td>POS starting block</td><td>2,001 block</td></tr>
 <tr><td>POS phase duration</td><td>500,000,000 LTS</td></tr>
 <tr><td>POS block reward distribution</td><td>SeeSaw</td></tr>
@@ -52,14 +50,14 @@ The project brings tangible benefits not only to the digital world but also to t
 
 ## License
 
-BitGreen Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+LiteCoinS Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 ## Development Process
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/chain123-team/litecoins/tags) are created
-regularly to indicate new official, stable release versions of BitGreen Core.
+regularly to indicate new official, stable release versions of LiteCoinS Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
