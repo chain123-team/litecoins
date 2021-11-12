@@ -1,4 +1,5 @@
 Building LiteCoins on Unbuntu 16.04
+(If you want to install on Ubuntu 18.04, you can download litecoins static version on github, https://github.com/chain123-team/litecoins/releases/download/1.3.0.1/litecoins-static-1.3.0.1-arm-linux-gnu-ubuntu.16.0.4.tar.gz)
 
 Use the autogen script to prepare the build environment.
 
